@@ -3,9 +3,12 @@ import { Text, StyleSheet } from 'react-native';
 
 const Result = ({ imc }) => {
     return ( 
-      <Text style={styles.result}> Seu IMC é: {imc}</Text> 
+      <Text style={styles.result}> Seu IMC é: {imc}</Text>,
+      <Text style={styles.result}> Seu classificacao é: {classe} </Text> 
     ); 
 };
+
+
 
 const styles = StyleSheet.create({ 
   result: { 

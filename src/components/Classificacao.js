@@ -2,19 +2,8 @@ import { View, TextInput, Button, StyleSheet } from 'react-native';
 import Result from './Result';
 import { useState } from "react";
 
-const FormIMC = () => { 
-  const [peso, setPeso] = useState(''); 
-  const [altura, setAltura] = useState(''); 
-  const [imc, setImc] = useState(null);
+const Classificacao = () => { 
   const [classe, setClass] = useState(null);
-
-  const calcularIMC = () => { 
-    if (peso && altura) { 
-      const alturaMetros = parseFloat(altura) / 100; 
-      const imcCalculado = (parseFloat(peso) / (alturaMetros * alturaMetros)).toFixed(2); 
-      setImc(imcCalculado); 
-    } 
-  };
 
   const calcularClass = () => {
     if ( imc <= 18.5 ) {
@@ -45,21 +34,6 @@ const FormIMC = () => {
 
     return ( 
       <View style={styles.formContainer}> 
-        <TextInput
-          style={styles.input}
-          placeholder="Peso (kg)" 
-          keyboardType="numeric" 
-          value={peso} 
-          onChangeText={setPeso}
-        /> 
-        <TextInput 
-          style={styles.input}
-          placeholder="Altura (cm)" 
-          keyboardType="numeric" 
-          value={altura} 
-          onChangeText={setAltura}
-        />
-        <Button title="Calcular IMC" onPress={calcularIMC} /> 
         {imc && <Result imc={imc} />} 
       </View>
     ); 
@@ -81,4 +55,4 @@ const styles = StyleSheet.create({
     }, 
 });
 
-export default FormIMC;
+export default Classificacao;
