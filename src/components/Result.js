@@ -1,22 +1,25 @@
 import React from 'react';
-import { Text, StyleSheet } from 'react-native';
+import { Text, StyleSheet, View } from 'react-native';
 
+// Componente responsável por exibir o resultado do IMC
 const Result = ({ imc }) => {
-    return ( 
-      <Text style={styles.result}> Seu IMC é: {imc}</Text>,
-      <Text style={styles.result}> Seu classificacao é: {classe} </Text> 
-    ); 
+  return (
+    <View>
+      {/* Só exibe o texto se o IMC existir */}
+      {imc && <Text style={styles.result}> Seu IMC é: {imc}</Text>}
+    </View>
+  ); 
 };
 
-
-
+// Estilo do texto do resultado
 const styles = StyleSheet.create({ 
   result: { 
-    marginTop: 20, 
-    fontSize: 24, 
-    textAlign: 'center', 
-    color: '#333',
+    marginTop: 20,          // Espaço acima do texto
+    fontSize: 24,           // Tamanho da fonte grande
+    textAlign: 'center',    // Centraliza o texto
+    color: '#333',          // Cor escura para melhor leitura
   },
 });
 
+// Exporta o componente
 export default Result;
