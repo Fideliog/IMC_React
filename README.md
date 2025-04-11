@@ -11,6 +11,10 @@ Objetivos:
 - Calcular e exibir o peso ideal para a altura do usuário;
 - Exibir mensagens de erro caso os valores informados sejam inválidos.
 
+Video de apresentação no youTube:
+
+- https://youtube.com/shorts/N31pIrt0XCw
+
 Como Clonar e rodar o Projeto:
 
 Pré-requisitos:
